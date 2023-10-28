@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-weight: light;    
+}
+
+header ul
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    
+}
+header ul li
+{
+    display: flex;
+    margin-top: 2%;
+    align-items: center;
+    
+}
+.top
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    margin-left: 5px;
+    
+}
+.yandex-logo
+{
+    width: 80px;
+    align-items: flex-start;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.yandex-logo:hover
+{
+
+    transform: scale(1.2);
+   
+}
+#menu-icon
+{
+    font-size: 35px;
+    cursor: pointer;
+}
+#menu-icon:hover
+{
+    color: lightgrey;
+}
+
+.button
+{
+   
+    padding:0.8rem;
+    border-radius: 9.7px;
+    border: none;
+    width: 80px;
+    cursor: pointer;
+   
+}
+.button:hover
+{
+    box-shadow: 1px 1px 2px 2px grey; 
+}
+
+.right-side
+{
+    display: flex;
+    padding: 4px;
+    margin-left: 5px;
+   
+}
+.right-side ul li
+{
+    padding: 0 0.6rem;
+}
+
+.icons
+{
+    display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 10%;
+}
+
+.ech
+{
+    margin: 20px;
+    cursor: pointer;
+}
+.ech img {
+   
+    width: 50px; 
+     border-radius: 50%;
+    border: 1px solid saddlebrown;
+    transition: transform 0.3s;
+  }
+.ech img:hover
+{
+    transform: scale(1.2);
+}
+  .search-bar
+  {
+    display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 0.6rem;
+      cursor: pointer;
+
+    
+  }
+  .search-bar img
+  {
+    width: 75px;
+    
+  }
+  .new
+  {
+    margin-left: 5px;
+    border: 2px solid rgb(243, 180, 9);
+    border-radius: 10px;
+    height: 2.9rem;
+  }
+  .new input
+  {
+    width: 35rem;
+    height: 2.4rem;
+    margin-left: 0.5rem;
+    border: none;
+    outline: none;
+    border-radius: 23px;
+  }
+ 
+  .new button
+  {
+    width:4.9rem;
+    height:2.7rem;
+    text-align: center;
+    font-size:19px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: rgb(243, 180, 9);
+    border-color: rgb(243, 180, 9);
+    color: black;
+	cursor:pointer;
+  }
+  .new button:hover
+  {
+    box-shadow: 1px 1px 2px 2px grey; 
+  }
+  #keyboard
+  {
+    font-size: 20px;
+  }
+
+  /* Whether */
+  .whether
+  {
+    display: flex;
+      flex-direction: row;
+      justify-content: left;
+      align-items: center;
+      text-align: center;
+      padding: 0 0.6rem;
+      margin-left: 23rem;
+      cursor: pointer; 
+  }
+  .whether img
+  {
+    width: 40px;
+    height: auto;
+  }
+  .whether ul li 
+  {
+    list-style: none;
+    margin-left: 33rem;
+    color: gray;
+  }
+  .whether ul li:hover
+  {
+    color: black;
+  }
+  .bottom
+  {
+    margin-top: 20%;
+    align-items: center;
+    padding: 1.2rem 0;
+  }
+  .bottom p 
+  {
+    display: flex;
+    justify-content: center;
+    margin-right: 2px;
+  }
+  .bottom p span
+  {
+    color: blue;
+    margin-left: 1.2rem;
+    cursor: pointer;
+
+  }
+
+.footer-bottom
+{
+    display: flex;
+    justify-content: center;
+}
+.footer-bottom ul
+  {
+    list-style: none;
+    display: flex;
+   padding: 0.6rem 0;
+    margin-top: 2%;
+  }
+  .footer-bottom ul li
+  {
+    padding: 0 0.6rem;
+    color: grey;
+    cursor: pointer;
+  }

@@ -1,0 +1,851 @@
+body
+{
+  background-image: url('./assets/taxi.jpeg');
+  background-size: cover;
+
+}
+
+.nav
+{
+  display: flex !important;
+  background: black !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+.nav1
+{
+  display: flex !important;
+  align-items: center !important;
+}
+.nav1 img
+{
+    width:3rem !important;
+    display: inline !important;
+    margin-left: 10rem !important;
+    margin-right: 1rem !important;
+}
+.card-container
+{
+  margin-left: 2rem;
+    width: 30rem !important; 
+    background:white !important;
+    height: 85vh !important;
+    border-radius: 30px !important;
+    margin-top: 2rem;
+}
+.card-container h3{
+  
+  background:#fdb813;
+  color:black;
+  text-align:center;
+  padding:'1rem'
+}
+.my-btn-class-39 { border: none; display: inline-block; text-align: center; cursor: pointer; text-transform: uppercase; outline: none; overflow: hidden; position: relative; color: rgb(255, 255, 255); font-weight: 700; font-size: 15px; background-color: rgb(34, 34, 34); padding: 1rem 3rem; margin-left: 5px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px; }
+.my-btn-class-39:hover { background: none; }
+.my-btn-class-39 span { position: relative; z-index: 1; }
+.my-btn-class-39::after { content: ""; position: absolute; left: 0px; top: 0px; height: 490%; width: 140%; background: rgb(120, 199, 210); transition: all 0.5s ease-in-out 0s; transform: translateX(-98%) translateY(-25%) rotate(45deg); }
+.my-btn-class-39:hover::after { transform: translateX(-9%) translateY(-25%) rotate(45deg); }
+
+.wrapper{
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  margin-left: 1rem !important;
+  height: 50px !important;
+  width: 28rem !important;
+  align-items: center !important;
+  border-radius: 5px !important;
+  padding-top: 10px !important;
+ 
+}
+
+.wrapper .option{
+  background: #fff !important;
+  height: 100% !important;
+  width: 300 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-evenly !important;
+  margin: 0 10px !important;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+  padding: 0 10px !important;
+  border: 2px solid lightgrey !important;
+  transition: all 0.3s ease !important;
+}
+.wrapper .option .dot{
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.wrapper .option .dot:hover{
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.wrapper .option .dot::before{
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #0069d9;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"]{
+  display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2{
+  border-color: #0069d9 !important;
+  background: #0069d9 !important;
+}
+
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 25px;
+  color: #808080;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span{
+  color: #fff;
+}
+.forms {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#source, #destination
+{
+    
+    color: rgba(0,0,0,.87);
+    border-bottom-color: rgba(0,0,0,.42);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: .009375em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    align-self: flex-end;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 16px 6px;
+    transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 4px 4px 0 0;
+    background: rgb(245, 245, 245);
+    height: 56px;
+    margin-bottom: 2rem;
+
+}
+#source:hover, #destination:hover{
+    border-bottom-color: rgba(0,0,0,.87);
+    background: #ececec;
+}
+#source:focus,#destination:hover{
+    border-color: #6200ee;
+}
+#check_cabs
+{
+  
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 12px 24px;
+  border: 0;
+  width: 100%;
+  color: #fff;
+  background: #ff5000;
+  line-height: 1.15;
+  font-size: 16px;
+}
+#check_cabs:hover
+{
+
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+}
+.cabcontainer
+{
+  margin-top: 1rem !important;
+  background: #fff ;
+  width: 100%;
+  height:fit-content;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap:  1rem;
+}
+
+.card
+{
+display: flex;
+justify-content: center;
+align-items: center;
+transition: transform 0.5s;
+}
+.card:hover
+{
+  transform: scale(1.1);
+}
+
+.card .title
+{
+  font-size: 1rem;
+  text-align: center;
+  color: green;
+}
+.card .title span
+{
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: orangered;
+}
+.card .carname
+{
+  font-size: 2rem;
+  text-align: center;
+}
+.card .cartype
+{
+  font-weight: 800;
+  text-align: center;
+}
+.card button
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3rem;
+}
+.card .details
+{
+  display: flex;
+  flex-direction: column;
+  font-weight: bolder;
+  color: brown;
+}
+.card .details span
+{
+  display: inline;
+  margin-left: 2rem;
+  font-weight: bold;
+  color:blue
+}
+
+.booking
+{
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 75rem;
+
+}
+.Booking_form
+{
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 35rem;
+  border-radius: 10%;
+  background: #1de9b6;
+  
+}
+.Booking_form input[type=text],.Booking_form input[type=tel],.Booking_form input[type=number]
+{
+  width: 19rem;
+  margin-bottom: 1rem;
+  border: 3px solid #000;
+  border-radius: 5px;
+  height: 50px;
+  line-height: normal;
+  color: #282828;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  user-select: auto;
+  font-size: 16px;
+  padding: 0 6px;
+  padding-left: 12px;
+}
+.Booking_form input[type=text]:focus
+{
+  border: 3px solid #5551ff;
+}
+#check_cabs2
+{
+  
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 3px;
+  color: #fff;
+  background: #000;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 18px;
+  padding: 12px 20px;
+  text-align:center;
+  transition-duration: .15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  
+}
+#check_cabs2:hover{
+  color: #000;
+  background: rgb(255, 218, 87);
+}
+
+.radio-input {
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+
+	&:checked + .radio-title {
+		border-color: #2260ff;
+		box-shadow: 0 5px 10px rgba(#000, 0.1);
+		color: white;
+    background: #2260ff;
+
+		&:before {
+			transform: scale(1);
+			opacity: 1;
+			background-color: #2260ff;
+			border-color: #2260ff;
+		}
+		
+		.radio-icon, .radio-lable {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-left: 1.4rem;
+		}
+	}
+	
+	&:focus + .radio-title {
+		border-color: #2260ff;
+		box-shadow: 0 5px 10px rgba(#000, 0.1), 0 0 0 4px #b5c9fc;
+		&:before {
+			transform: scale(1);
+			opacity: 1;
+		}
+	}
+}
+
+.radio-title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 10rem;
+	min-height: 3rem;
+	border-radius: 0.5rem;
+	border: 3px solid #b5bfd9;
+	background-color: #fff;
+	box-shadow: 0 5px 10px rgba(#000, 0.1);
+	transition: 0.15s ease;
+	cursor: pointer;
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 1.25rem;
+		height: 1.25rem;
+		border: 2px solid #b5bfd9;
+		background-color: #fff;
+		border-radius: 50%;
+		top: 0.25rem;
+		left: 0.25rem;
+		opacity: 0;
+		transform: scale(0);
+		transition: 0.25s ease;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' fill='%23FFFFFF' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' fill='none'%3E%3C/rect%3E%3Cpolyline points='216 72.005 104 184 48 128.005' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'%3E%3C/polyline%3E%3C/svg%3E");
+		background-size: 12px;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+
+	&:hover {
+		border-color: #2260ff;
+		&:before {
+			transform: scale(1);
+			opacity: 1;
+		}
+	}
+}
+
+.radio-icon {
+	transition: .375s ease;
+	color: #494949;
+	svg {
+		width: 3rem;
+		height: 1rem;
+	}
+}
+
+.radio-lable {
+	color: black;
+	transition: .375s ease;
+	text-align: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .nav
+{
+  display: flex ;
+  background: black ;
+    align-items: center ;
+}
+.nav1
+{
+  display: flex !important;
+  align-items: center !important;
+}
+.nav1 img
+{
+    width:3.5rem;
+    display: inline ;
+    margin-left: 5rem !important;
+    margin-right: 1rem ;
+}
+.nav2 h3
+{
+  font-size: 1.5rem !important;
+  margin-left: 3.5rem;
+}
+
+.card-container
+{
+    width: 23rem !important; 
+    background:white !important;
+    height: 82vh !important;
+    border-radius: 30px !important;
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+}
+.card-container h3{
+  
+  background:#fdb813;
+  color:black;
+  text-align:center;
+  padding:1rem;
+
+}
+.wrapper{
+  display: flex !important;
+  margin-bottom: 1rem;
+  margin-left: 1.6rem !important;
+  height: 50px !important;
+  width: 29rem !important;
+  align-items: center !important;
+  border-radius: 5px !important;
+  padding-top: 0rem!important;
+ 
+}
+.wrapper .option{
+  background: #fff !important;
+  height: 100% !important;
+  width: 600 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-evenly !important;
+  margin: 0 10px !important;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+  padding: 0 1px !important;
+  border: 2px solid lightgrey !important;
+  transition: all 0.3s ease !important;
+}
+.wrapper .option .dot{
+  display: none;
+}
+.cabcontainer
+{
+  margin-top: 1rem !important;
+  background: #fff ;
+  width: 100%;
+  height:fit-content;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap:  1rem;
+}
+
+.card
+{
+display: grid;
+margin-left: 3rem;
+grid-template-columns: 1fr;
+transition: transform 0.5s;
+}
+.card:hover
+{
+  transform: scale(1.1);
+}
+
+.card .title
+{
+  font-size: 1rem;
+  text-align: center;
+  color: green;
+}
+.card .title span
+{
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: orangered;
+}
+.card .carname
+{
+  font-size: 2rem;
+  text-align: center;
+}
+.card .cartype
+{
+  font-weight: 800;
+  text-align: center;
+}
+.card button
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3rem;
+}
+.card .details
+{
+  display: flex;
+  flex-direction: column;
+  font-weight: bolder;
+  color: brown;
+}
+.card .details span
+{
+  display: inline;
+  margin-left: 2rem;
+  font-weight: bold;
+  color:blue
+}
+
+.booking
+{
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 0rem;
+}
+.Booking_form
+{
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 22rem;
+  border-radius: 10%;
+  background: #1de9b6;
+  margin-left: 22rem;
+  
+}
+.Booking_form input[type=text],.Booking_form input[type=tel],.Booking_form input[type=number]
+{
+  width: 19rem;
+  margin-bottom: 1rem;
+  border: 3px solid #000;
+  border-radius: 5px;
+  height: 50px;
+  line-height: normal;
+  color: #282828;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  user-select: auto;
+  font-size: 16px;
+  padding: 0 6px;
+  padding-left: 12px;
+}
+.Booking_form input[type=text]:focus
+{
+  border: 3px solid #5551ff;
+}
+#check_cabs2
+{
+  
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 3px;
+  color: #fff;
+  background: #000;
+  width: 15rem !important;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 18px;
+  padding: 12px 20px;
+  text-align:center;
+  transition-duration: .15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  
+}
+#check_cabs2:hover{
+  color: #000;
+  background: rgb(255, 218, 87);
+}
+.done img
+{
+  width: 23rem !important;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.done h4
+{
+  font-size: 1.6rem;
+  color: black !important;
+}
+}
+
+@media only screen and (max-width: 1024px) {
+  .nav
+{
+  display: flex ;
+  background: black ;
+    align-items: center ;
+}
+.nav1
+{
+  display: flex !important;
+  align-items: center !important;
+}
+.nav1 img
+{
+    width:3.5rem;
+    display: inline ;
+    margin-left: 5rem !important;
+    margin-right: 1rem ;
+}
+.nav2 h3
+{
+  font-size: 1.5rem !important;
+  margin-left: 3.5rem;
+}
+
+.card-container
+{
+    width: 43rem !important; 
+    background:white !important;
+    height: 70vh !important;
+    border-radius: 30px !important;
+    margin-top: 2rem;
+    margin-left: 2.5rem;
+}
+.card-container h3{
+  
+  background:#fdb813;
+  color:black;
+  text-align:center;
+  padding:1rem;
+
+}
+.wrapper{
+  display: flex !important;
+  margin-bottom: 1rem;
+  height: 75px !important;
+  align-items: center !important;
+  border-radius: 5px !important;
+  padding-top: 0rem!important;
+  margin-left: 7rem !important;
+ 
+}
+.wrapper .option{
+  background: #fff !important;
+  height: 100% !important;
+  width: 50rem !important;
+  display: flex !important;
+  align-items: center !important;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+  padding: 0 1px !important;
+  border: 2px solid lightgrey !important;
+  transition: all 0.3s ease !important;
+}
+.wrapper .option .dot{
+  display: none;
+}
+.cabcontainer
+{
+  margin-top: 1rem !important;
+  background: #fff ;
+  width: 100%;
+  height:fit-content;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:  1rem;
+}
+
+.card
+{
+margin-left: 3rem;
+transition: transform 0.5s;
+}
+.card:hover
+{
+  transform: scale(1.1);
+}
+
+.card .title
+{
+  font-size: 1rem;
+  text-align: center;
+  color: green;
+}
+.card .title span
+{
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: orangered;
+}
+.card .carname
+{
+  font-size: 2rem;
+  text-align: center;
+}
+.card .cartype
+{
+  font-weight: 800;
+  text-align: center;
+}
+.card button
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3rem;
+}
+.card .details
+{
+  display: flex;
+  flex-direction: column;
+  font-weight: bolder;
+  color: brown;
+}
+.card .details span
+{
+  display: inline;
+  margin-left: 2rem;
+  font-weight: bold;
+  color:blue
+}
+
+.booking
+{
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 45rem;
+}
+.Booking_form
+{
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 10%;
+  width: 74rem;
+  background: #1de9b6;
+  height: 44rem;
+  margin-left: 4rem;
+  
+}
+.Booking_form input[type=text],.Booking_form input[type=tel],.Booking_form input[type=number]
+{
+  width: 19rem;
+  margin-bottom: 1rem;
+  border: 3px solid #000;
+  border-radius: 5px;
+  height: 50px;
+  line-height: normal;
+  color: #282828;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  user-select: auto;
+  font-size: 16px;
+  padding: 0 6px;
+  padding-left: 12px;
+}
+.Booking_form input[type=text]:focus
+{
+  border: 3px solid #5551ff;
+}
+#check_cabs2
+{
+  
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 3px;
+  color: #fff;
+  background: #000;
+  width: 15rem !important;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 18px;
+  padding: 12px 20px;
+  text-align:center;
+  transition-duration: .15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  
+}
+#check_cabs2:hover{
+  color: #000;
+  background: rgb(255, 218, 87);
+}
+.done img
+{
+  width: 33rem !important;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.done h4
+{
+  font-size: 4.5rem;
+  color: black !important;
+}
+.done button
+{
+  width: 22rem;
+  height: 4rem;
+  font-size: 2rem;
+}
+}

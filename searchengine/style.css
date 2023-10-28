@@ -1,0 +1,111 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body
+{
+    background: #e0f6fb;
+}
+.searchbar
+{
+    display: flex;
+    flex-direction: column;
+     margin: 10rem;
+    
+}
+input[type=text]
+{
+    
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 19px;
+    vertical-align: baseline;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: .16px;
+    border-radius: 0;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #8d8d8d;
+    background-color: #f4f4f4;
+    padding: 0 16px;
+    color: #161616;
+    transition: background-color 70ms cubic-bezier(.2,0,.38,.9),outline 70ms cubic-bezier(.2,0,.38,.9);  
+}
+input[type=text]:focus{
+    outline: 2px solid #0f62fe;
+    outline-offset: -2px;
+}
+.searchbar h3 
+{
+    font-size: 3rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 2rem;
+}
+
+.cards
+{
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 1rem;
+   margin-top: -10rem;
+}
+.card
+{
+   
+   background: #ffff;
+   border: 1px solid black;
+   width: 12rem;
+   padding: 1rem;
+   border-radius: 15px;
+   margin-left: 2rem;
+
+}
+.card span
+{
+    display: block;
+    margin-top:.5rem;
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    border: 2px solid red;
+    width: 8rem;
+    padding: .5rem;
+}
+.card img
+{
+    width:9rem;
+    height:8rem;
+    display: block;
+    margin-bottom: 1rem;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.card button
+{
+    
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 12px 24px;
+    border: 0;
+    color: #fff;
+    background: #ff5000;
+    line-height: 1.15;
+    font-size: 16px;
+}
+.card button:hover
+{
+    transition: all .1s ease;
+        box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+}
